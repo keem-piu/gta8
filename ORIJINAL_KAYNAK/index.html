@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick.com GTA Canlı Yayınları</title>
+    <!-- SVG favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3ClinearGradient id='a' x1='24' x2='24' y1='39.744' y2='6.848' gradientTransform='matrix(1 0 0 -1 0 47.89)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234c4c4c'/%3E%3Cstop offset='1' stop-color='%23343434'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23a)' d='M5,8h38c0.552,0,1,0.448,1,1v4c0,0.552-0.448,1-1,1l0,0c-1.222,0-2.337,0.701-2.866,1.803	L28.283,40.474C28.109,40.798,27.771,41,27.403,41h-4.785c-0.379,0-0.725-0.214-0.894-0.553l-10.935-22.87	C9.693,15.385,7.451,14,5,14l0,0c-0.552,0-1-0.448-1-1V9C4,8.448,4.448,8,5,8z'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M6,11.323V11c0-0.552,0.448-1,1-1h18c0.552,0,1,0.448,1,1v0.219	c0,0.459-0.312,0.859-0.757,0.97l-0.824,0.206c-1.241,0.31-1.876,1.69-1.304,2.835l4.345,8.69c0.199,0.398,0.781,0.357,0.922-0.065	l2.846-8.539c0.426-1.279-0.265-2.662-1.544-3.088l0,0C29.275,12.092,29,11.71,29,11.279V11c0-0.552,0.448-1,1-1h11.061	C41.579,10,42,10.421,42,10.939v0.384c0,0.404-0.259,0.763-0.642,0.891l0,0c-1.51,0.503-2.758,1.586-3.469,3.009L27.267,38.416	C27.104,38.772,26.749,39,26.358,39h-2.729c-0.385,0-0.735-0.221-0.902-0.567l-9.874-20.571c-1.192-2.484-3.273-4.43-5.831-5.453	l-0.394-0.158C6.249,12.1,6,11.732,6,11.323z' clip-rule='evenodd'/%3E%3ClinearGradient id='b' x1='14.755' x2='36.92' y1='40.623' y2='18.457' gradientTransform='matrix(1 0 0 -1 0 47.89)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234caf50'/%3E%3Cstop offset='.133' stop-color='%234aae50'/%3E%3Cstop offset='.239' stop-color='%2343a94e'/%3E%3Cstop offset='.373' stop-color='%2338a14c'/%3E%3Cstop offset='.482' stop-color='%23279648'/%3E%3Cstop offset='.621' stop-color='%23184'/%3E%3Cstop offset='1' stop-color='%23088242'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23b)' d='M39.609,11h-8.338c-0.317,0-0.417,0.427-0.134,0.568l0.394,0.197	c1.396,0.698,2.023,2.349,1.444,3.797l0,0l0,0L31.6,19l-3.201,8.002c-0.158,0.395-0.705,0.425-0.906,0.05l-6.044-11.333	c-0.794-1.489-0.204-3.34,1.305-4.095c0.31-0.155,0.2-0.623-0.147-0.623H9.496c-0.42,0-0.573,0.553-0.213,0.769	c2.422,1.453,4.347,3.604,5.524,6.172l8.926,19.475C23.896,37.772,24.251,38,24.642,38h0.703c0.398,0,0.758-0.236,0.917-0.601	l9.405-21.621l0,0c0.865-1.802,2.305-3.265,4.094-4.158C40.07,11.465,39.954,11,39.609,11z'/%3E%3C/svg%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #53fc18;
+            --primary-dark: #2b8a0e;
+            --background: #18181c;
+            --card-bg: #23232b;
+            --text: #f5f5f7;
+            --text-secondary: #b0b0b8;
+            --live-red: #ff3b3b;
+            --sponsor-gold: #ffe066;
+            --category-bg: #23232b;
+            --category-text: #53fc18;
+            --card-shadow: 0 6px 32px 0 rgba(0,0,0,0.18);
+            --card-hover-shadow: 0 12px 32px 0 rgba(83,252,24,0.10);
+            --border-radius: 22px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #18181c 0%, #23232b 100%);
+            color: var(--text);
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            letter-spacing: 0.01em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 16px 16px 16px;
+        }
+
+        header {
+            background: transparent;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        #search-form {
+            position: relative;
+            margin-top: 18px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #53fc18;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px 20px 14px 44px; /* Soldan boşluk artırıldı */
+            border-radius: 14px;
+            border: none;
+            background: #23232b;
+            color: var(--text);
+            font-size: 1.08rem;
+            margin: 0 auto;
+            display: block;
+            outline: none;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+        .search-bar:focus {
+            box-shadow: 0 4px 16px 0 rgba(83,252,24,0.12);
+            border: 1.5px solid var(--primary);
+        }
+
+        .streamer-list {
+            display: grid;
+            grid-template-columns: repeat(3, 500px); /* 3 kanal, her biri 500px */
+            justify-content: center;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .streamer-card {
+            width: 500px;
+            min-width: 0;
+            max-width: 100%;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: box-shadow 0.25s, transform 0.18s;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: none;
+            position: relative;
+        }
+        .streamer-card:hover {
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-6px) scale(1.02);
+        }
+        .streamer-card.live {
+            border: 2px solid var(--live-red);
+        }
+        .streamer-card.sponsored {
+            border: 2px solid var(--sponsor-gold);
+            box-shadow: 0 0 24px 0 rgba(255, 224, 102, 0.18);
+        }
+
+        .streamer-media {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #19191e;
+            position: relative;
+        }
+        .streamer-iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: none;
+            display: block;
+        }
+        .offline-placeholder {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            gap: 12px;
+            background: rgba(0,0,0,0.55);
+        }
+        .profile-image {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--text-secondary);
+        }
+        .offline-status {
+            background: rgba(0,0,0,0.7);
+            padding: 6px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .streamer-info {
+            padding: 22px 20px 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex-grow: 1;
+        }
+        .streamer-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            /* align-items: center; Zaten var, tekrar eklemeye gerek yok */
+        }
+        .avatar-wrapper,
+        .streamer-header > div[style*="inline-block"] {
+            position: relative;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 62px;
+            height: 62px;
+            min-width: 62px;
+            min-height: 62px;
+            /* Daire oranı için */
+            border-radius: 50%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .streamer-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .favorite-btn {
+            position: absolute !important;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            background: none;
+            z-index: 2;
+            border-radius: 50%;
+            box-sizing: border-box;
+            /* Parlaklık ve efektler zaten mevcut */
+        }
+
+        .streamer-name-container {
+            flex-grow: 1;
+            min-width: 0;
+        }
+        .streamer-name {
+            font-weight: 700;
+            font-size: 1.18rem;
+            color: var(--primary);
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: color 0.18s;
+        }
+        .streamer-name:hover {
+            color: #fff;
+        }
+        .streamer-title {
+            font-size: 1.01rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+        .streamer-meta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;      /* Ortala */
+            gap: 18px;                   /* Aralar biraz açıldı */
+            margin-top: 24px;
+            width: 100%;
+            font-size: 1.08rem;
+            flex-wrap: nowrap;           /* Alt satıra taşmasın */
+            overflow: hidden;            /* Taşanları gizle */
+        }
+        .streamer-category,
+        .viewer-count,
+        .live-duration {
+            flex: 1 1 0;
+            min-width: 0;
+            max-width: 180px;            /* Gerekirse artırabilirsin */
+            padding: 7px 10px;
+            font-size: 1.08rem;
+            border-radius: 8px;
+            white-space: nowrap;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;     /* İçeriği ortala */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0 2px;
+        }
+
+        .streamer-category {
+            background: var(--category-bg);
+            color: var(--category-text);
+            font-weight: 700;
+            border: 1.5px solid var(--primary);
+            max-width: 100%;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+            text-decoration: none; /* Altı çizgiyi kaldırır */
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .viewer-count {
+            background: rgba(255, 59, 59, 0.13);
+            color: var(--live-red);
+            font-weight: 700;
+            gap: 6px;
+        }
+
+        .viewer-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        .live-duration {
+            background: rgba(83, 252, 24, 0.09);
+            color: var(--primary);
+            font-family: monospace;
+            font-weight: 700;
+            gap: 6px;
+        }
+        .clock-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+        .live-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--live-red);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px 0 rgba(255,59,59,0.10);
+        }
+        .live-pulse {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.7; }
+            100% { transform: scale(0.95); opacity: 1; }
+        }
+        .streamer-tag {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            background: rgba(0,0,0,0.7);
+            color: var(--primary);
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+        .sponsored-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--sponsor-gold);
+            color: #23232b;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px 0 rgba(255,224,102,0.10);
+        }
+        .last-updated {
+            text-align: center;
+            margin-top: 36px;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+        }
+        .refresh-button {
+            background: #23232b;
+            color: var(--primary);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 28px;
+            transition: all 0.2s;
+            font-weight: 700;
+            font-size: 1.01rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+        }
+        .refresh-button:hover {
+            background: var(--primary);
+            color: #23232b;
+            transform: translateY(-2px) scale(1.03);
+        }
+        .loading {
+            text-align: center;
+            padding: 36px;
+            color: var(--primary);
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+        .solar-clock {
+            width: 100%;
+            height: 100%;
+            animation: rotate 2s linear infinite;
+            transform-origin: center;
+        }
+        .solar-clock-circle {
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 4;
+            stroke-dasharray: 150;
+            stroke-dashoffset: 150;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes dash {
+            0% { stroke-dashoffset: 150; stroke: var(--primary);}
+            50% { stroke-dashoffset: 50; stroke: var(--primary-dark);}
+            100% { stroke-dashoffset: 150; stroke: var(--primary);}
+        }
+        .error-message {
+            color: #ff5555;
+            text-align: center;
+            padding: 18px;
+            background: rgba(255, 85, 85, 0.10);
+            border-radius: 10px;
+            margin: 18px 0;
+            border: 1.5px solid rgba(255, 85, 85, 0.18);
+        }
+        @media (max-width: 900px) {
+            .streamer-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px 2vw;
+            }
+            .streamer-list {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .streamer-info {
+                padding: 14px 8px 12px 8px;
+            }
+            .streamer-header {
+                gap: 10px;
+            }
+        }
+        /* Responsive düzeltme */
+        @media (max-width: 1600px) {
+            .streamer-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .streamer-card {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1100px) {
+            .streamer-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sponsor kullanıcı adı için animasyonlu degrade renk efekti */
+.streamer-card.sponsored .streamer-name {
+    background: linear-gradient(90deg, #53fc18, #00e0ff, #53fc18, #ffe066, #53fc18);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: sponsor-gradient-move 2.5s linear infinite;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+@keyframes sponsor-gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Sponsor kartındaki profil resmi ve çevrimdışı resmi için animasyonlu degrade çerçeve */
+.streamer-card.sponsored .streamer-avatar,
+.streamer-card.sponsored .profile-image {
+    position: relative;
+    z-index: 1;
+    border: 3px solid transparent;
+    background: linear-gradient(120deg, #53fc18, #00e0ff, #53fc18, #ffe066, #53fc18);
+    background-size: 300% 300%;
+    animation: sponsor-avatar-gradient-move 2.5s linear infinite;
+    /* Görselin degrade görünmesi için aşağıdaki satırlar gerekli */
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px transparent, 0 0 16px 2px rgba(83,252,24,0.18);
+}
+
+@keyframes sponsor-avatar-gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.favorite-btn {
+    box-shadow: 0 0 0 3px #53fc18, 0 2px 8px 0 rgba(83,252,24,0.18);
+    border-radius: 50%;
+    transition: box-shadow 0.2s, transform 0.15s;
+    opacity: 0.93;
+    outline: 2px solid #23232b;
+}
+.favorite-btn:hover {
+    box-shadow: 0 0 0 5px #53fc18, 0 4px 16px 0 rgba(83,252,24,0.25);
+    transform: scale(1.08);
+    opacity: 1;
+    outline: 2.5px solid #53fc18;
+}
+.favorite-btn svg {
+    filter: drop-shadow(0 0 4px #53fc18);
+}
+
+/* .avatar-wrapper ve .favorite-btn için ekleyin veya güncelleyin */
+
+.avatar-wrapper {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    min-height: 62px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.favorite-btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s;
+}
+
+.avatar-wrapper:hover .favorite-btn,
+.avatar-wrapper:focus-within .favorite-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kick.com GTA Canlı Yayınları</h1>
+            <form id="search-form" onsubmit="return false;" style="margin-top:20px; position:relative; max-width:400px; margin-left:auto; margin-right:auto;">
+                <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0"></path>
+                    </svg>
+                </span>
+                <input type="text" id="search-input" class="search-bar" placeholder="Kanal ara...">
+            </form>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <div id="streamer-list" class="streamer-list"></div>
+
+        <!-- Yükleniyor bölümü kartların altına taşındı -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner">
+                <svg class="solar-clock" viewBox="0 0 50 50">
+                    <circle class="solar-clock-circle" cx="25" cy="25" r="20"></circle>
+                </svg>
+            </div>
+            <div>Yayınlar hızla yükleniyor...</div>
+        </div>
+
+        <div class="last-updated">
+            Son güncelleme: <span id="update-time"></span>
+        </div>
+
+        <center>
+            <button class="refresh-button" onclick="fetchStreamers()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z" fill="currentColor"/>
+                </svg>
+                Yenile
+            </button>
+        </center>
+    </div>
+
+    <script>
+        // Sabitler ve Yapılandırma
+        const CONFIG = {
+            API_BASE_URL: "https://kick.com/api/v2/channels/",
+            REFRESH_INTERVAL: 5 * 60 * 1000,
+            BATCH_SIZE: 15,
+            STATIC_STREAMERS: [
+                "burakg", "flavorr", "limonvari", "x4te", "egemenfx", "chavohaze", "diorr35", 
+                "justwicky", "10000days", "thekolpa", "gogo", "keempiu", "aka", "omeredic", "fjorgyn", "diana0035",
+                "cjayhq", "dex0f", "liyantl", "chicossberg", "rayz", "katasayf", "repkk", 
+                "pennia", "adamimlew", "rod4n", "tacocan", "atillaberk", "eduskaa",
+                "qafsiiel", "fiorevelenoso", "timuty", "jrokez", "cero31", "zibrall", "ogibkg",
+                "wasg0d", "gitartist", "liftof", "ertinayy", "hakki34", "emrelax", "pumii", 
+                "egg4x", "bfly0", "liadona", "lmunchies", "odisnos", "neocastro", "sapientum",
+                "kamls", "rivxm0", "nadozp", "thxgqd", "anosx", "loudone", "atapoze", "dexzyn",
+                "ardafx", "bedo447", "icastra", "herayoo", "aqerion", "darkclef", "flokzz",
+                "hakanefe", "yonzef", "pyrox", "rrelia", "akaburaq", "costaan", "requsavage",
+                "reveneant", "owll6", "endeavorty", "prisioner", "frexrd", "elworry", "enzoomb",
+                "gokhanhkn", "armis618", "anshi666", "canerzodiac", "turkishtaco", "sweetycadi",
+                "whatthemilqa", "sakuraipek", "parlochef", "mralpkaan", "ammoarmen", "orumcekenver",
+                "beratarsllan", "orhunpaso", "mordredsly", "hudsoonn", "cagatayk", "phriksos"
+            ],
+            SPONSORED_STREAMER: "keempiu",
+            CACHE_TTL: 3 * 24 * 60 * 60 * 1000 // 3 gün
+        };
+
+        // Uygulama Durumu
+        const APP_STATE = {
+            streamerStats: {},
+            updateIntervals: {},
+            profileImageCache: {},
+            observer: null,
+            isFirstLoad: true
+        };
+
+        // Yardımcı Fonksiyonlar
+        const Utils = {
+            formatNumber: (num) => num ? (num >= 1000 ? (num/1000).toFixed(1) + 'K' : num.toString()) : "0",
+            
+            formatDate: (dateString) => {
+                if (!dateString) return "Hiç yayın yapmadı";
+                const diffHours = Math.floor((Date.now() - new Date(dateString)) / (1000 * 60 * 60));
+                return diffHours < 1 ? "1 saatten az" : 
+                       diffHours < 24 ? `${diffHours} saat önce` : 
+                       `${Math.floor(diffHours / 24)} gün önce`;
+            },
+            
+            formatDuration: (startTime) => {
+                if (!startTime) return "00:00";
+                try {
+                    const diffMs = Math.max(0, Date.now() - new Date(startTime.replace(' ', 'T') + 'Z'));
+                    const totalSeconds = Math.floor(diffMs / 1000);
+                    const hours = Math.floor(totalSeconds / 3600);
+                    const minutes = Math.floor((totalSeconds % 3600) / 60);
+                    const seconds = totalSeconds % 60;
+                    const pad = num => num.toString().padStart(2, '0');
+                    if (hours > 0) {
+                        return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+                    } else {
+                        return `${pad(minutes)}:${pad(seconds)}`;
+                    }
+                } catch (e) {
+                    console.error("Süre hesaplama hatası:", e);
+                    return "00:00";
+                }
+            },
+            
+            createImageElement: (urls, alt, className, placeholderUrl) => {
+                const img = document.createElement('img');
+                img.className = className;
+                img.alt = alt;
+                img.loading = 'lazy';
+                
+                let currentIndex = 0;
+                const tryNextUrl = () => {
+                    if (currentIndex < urls.length) {
+                        img.src = urls[currentIndex++] + '?t=' + Date.now();
+                    } else {
+                        img.src = placeholderUrl;
+                    }
+                };
+                
+                img.onerror = tryNextUrl;
+                tryNextUrl();
+                return img;
+            },
+            
+            createClockIcon: () => {
+                const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+                svg.setAttribute("width", "14");
+                svg.setAttribute("height", "14");
+                svg.setAttribute("viewBox", "0 0 24 24");
+                
+                const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+                const mask = document.createElementNS("http://www.w3.org/2000/svg", "mask");
+                mask.setAttribute("id", "clockMask");
+                
+                const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+                g.setAttribute("fill", "none");
+                
+                const circlePath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                circlePath.setAttribute("fill", "#fff");
+                circlePath.setAttribute("d", "M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10");
+                
+                const clockPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                clockPath.setAttribute("fill", "#000");
+                clockPath.setAttribute("fill-rule", "evenodd");
+                clockPath.setAttribute("d", "M12 7.25a.75.75 0 0 1 .75.75v3.69l2.28 2.28a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1-.22-.53V8a.75.75 0 0 1 .75-.75");
+                clockPath.setAttribute("clip-rule", "evenodd");
+                
+                g.appendChild(circlePath);
+                g.appendChild(clockPath);
+                mask.appendChild(g);
+                defs.appendChild(mask);
+                
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute("fill", "currentColor");
+                path.setAttribute("d", "M0 0h24v24H0z");
+                path.setAttribute("mask", "url(#clockMask)");
+                
+                svg.appendChild(defs);
+                svg.appendChild(path);
+                
+                return svg;
+            },
+            
+            getCachedData: (key) => {
+                try {
+                    const item = localStorage.getItem(`kick-gta-${key}`);
+                    if (!item) return null;
+                    
+                    const { value, timestamp } = JSON.parse(item);
+                    if (Date.now() - timestamp > CONFIG.CACHE_TTL) {
+                        localStorage.removeItem(`kick-gta-${key}`);
+                        return null;
+                    }
+                    
+                    return value;
+                } catch (e) {
+                    return null;
+                }
+            },
+            
+            setCachedData: (key, value) => {
+                try {
+                    localStorage.setItem(`kick-gta-${key}`, JSON.stringify({
+                        value,
+                        timestamp: Date.now()
+                    }));
+                } catch (e) {
+                    console.error("Önbelleğe yazma hatası:", e);
+                }
+            }
+        };
+
+        // API İşlemleri
+        const API = {
+            getProfilePictureUrl: async (username) => {
+                const cachedUrls = Utils.getCachedData(`profile-${username}`);
+                if (cachedUrls) {
+                    return cachedUrls;
+                }
+
+                try {
+                    const response = await fetch(`${CONFIG.API_BASE_URL}${username}`);
+                    if (!response.ok) throw new Error('Kullanıcı bulunamadı');
+                    
+                    const data = await response.json();
+                    const profileUrl = (data.user.profile_pic || `https://images.kick.com/channels/${username}/profile_small`).split('?')[0];
+                    const urls = [profileUrl];
+                    
+                    Utils.setCachedData(`profile-${username}`, urls);
+                    return urls;
+                } catch (error) {
+                    console.error(`${username} profil resmi alınamadı:`, error);
+                    const initials = username.slice(0, 2).toUpperCase();
+                    return [
+                        `https://ui-avatars.com/api/?name=${initials}&background=1a1a24&color=53fc18`,
+                        `https://via.placeholder.com/150/1a1a24/53fc18?text=${initials}`
+                    ];
+                }
+            },
+
+            fetchStreamerData: async (username) => {
+                try {
+                    const [profilePicUrls, apiData] = await Promise.all([
+                        API.getProfilePictureUrl(username),
+                        fetch(`${CONFIG.API_BASE_URL}${username}`).then(res => res.json())
+                    ]);
+
+                    const livestream = apiData.livestream || {};
+                    return {
+                        username,
+                        isLive: livestream.is_live || false,
+                        viewers: livestream.viewer_count || 0,
+                        followers: Utils.formatNumber(apiData.followers_count || 0),
+                        lastStream: apiData.last_live_at ? Utils.formatDate(apiData.last_live_at) : "Hiç yayın yapmadı",
+                        title: livestream.session_title || `${username} Kanalı`,
+                        thumbnail: livestream.thumbnail?.url || null,
+                        startTime: livestream.created_at || null,
+                        category: livestream.categories?.[0]?.name || "GTA",
+                        profilePicUrls,
+                        initials: username.slice(0, 2).toUpperCase()
+                    };
+                } catch (error) {
+                    console.error(`${username} veri alım hatası:`, error);
+                    return API.getFallbackData(username);
+                }
+            },
+
+            getFallbackData: (username) => {
+                const initials = username.slice(0, 2).toUpperCase();
+                return {
+                    username,
+                    isLive: false,
+                    viewers: 0,
+                    followers: "0",
+                    lastStream: "Bilinmiyor",
+                    title: `${username} Kanalı`,
+                    thumbnail: null,
+                    startTime: null,
+                    category: "GTA",
+                    profilePicUrls: [
+                        `https://ui-avatars.com/api/?name=${initials}&background=1a1a24&color=53fc18`,
+                        `https://via.placeholder.com/150/1a1a24/53fc18?text=${initials}`
+                    ],
+                    initials
+                };
+            },
+
+            fetchStreamerStats: async () => {
+                const stats = {};
+                const results = [];
+                const now = Date.now();
+
+                try {
+                    if (APP_STATE.isFirstLoad || now - lastOfflineUpdate > OFFLINE_UPDATE_INTERVAL) {
+                        lastOfflineUpdate = now;
+                        // Tüm yayıncıları güncelle
+                        for (let i = 0; i < CONFIG.STATIC_STREAMERS.length; i += CONFIG.BATCH_SIZE) {
+                            const batch = CONFIG.STATIC_STREAMERS.slice(i, i + CONFIG.BATCH_SIZE);
+                            const batchRequests = batch.map(username =>
+                                API.fetchStreamerData(username).catch(e => API.getFallbackData(username))
+                            );
+                            const batchResults = await Promise.all(batchRequests);
+                            results.push(...batchResults);
+                        }
+                    } else {
+                        // Sadece canlı olanları güncelle
+                        const liveUsernames = Utils.getCachedData('live-streamers') || [];
+                        const batchRequests = liveUsernames.map(username =>
+                            API.fetchStreamerData(username).catch(e => API.getFallbackData(username))
+                        );
+                        const batchResults = await Promise.all(batchRequests);
+                        results.push(...batchResults);
+
+                        // Offline'ları cache'den al
+                        const cachedStats = APP_STATE.streamerStats;
+                        CONFIG.STATIC_STREAMERS.forEach(username => {
+                            if (!liveUsernames.includes(username) && cachedStats[username]) {
+                                results.push(cachedStats[username]);
+                            }
+                        });
+                    }
+
+                    const liveStreamers = results.filter(s => s.isLive).map(s => s.username);
+                    Utils.setCachedData('live-streamers', liveStreamers);
+
+                    results.forEach(data => stats[data.username] = data);
+                    APP_STATE.streamerStats = stats;
+                    return results;
+                } catch (error) {
+                    throw error;
+                }
+            }
+        };
+
+        // UI İşlemleri
+        const UI = {
+            updateDurationForCard: (card, startTime) => {
+                if (!card || !startTime) return;
+                const durationElement = card.querySelector('.live-duration span');
+                if (durationElement) {
+                    durationElement.textContent = Utils.formatDuration(startTime);
+                }
+            },
+
+            renderStreamers: (streamersData) => {
+                const streamerList = document.getElementById('streamer-list');
+                streamerList.innerHTML = '';
+
+                Object.values(APP_STATE.updateIntervals).forEach(clearInterval);
+                APP_STATE.updateIntervals = {};
+
+                // Arama filtresi uygula
+                const searchValue = (document.getElementById('search-input')?.value || '').trim().toLowerCase();
+                let filteredData = streamersData;
+                if (searchValue) {
+                    filteredData = streamersData.filter(s =>
+                        s.username.toLowerCase().includes(searchValue) ||
+                        (s.title && s.title.toLowerCase().includes(searchValue))
+                    );
+                }
+
+                // Favori ve sponsor ayır
+                let favorites = [];
+                try {
+                    favorites = JSON.parse(localStorage.getItem('kick-gta-favorites')) || [];
+                } catch {}
+                const favoriteStreamers = [];
+                const nonFavoriteStreamers = [];
+                filteredData.forEach(s => {
+                    if (favorites.includes(s.username)) {
+                        favoriteStreamers.push(s);
+                    } else {
+                        nonFavoriteStreamers.push(s);
+                    }
+                });
+                // Favori olanları favorilerdeki sıraya göre sırala
+                favoriteStreamers.sort((a, b) => favorites.indexOf(a.username) - favorites.indexOf(b.username));
+
+                // Sponsorlu yayıncıyı bul ve ayır
+                const sponsoredStreamer = filteredData.find(s => s.username === CONFIG.SPONSORED_STREAMER);
+                const otherFavoriteStreamers = favoriteStreamers.filter(s => s.username !== CONFIG.SPONSORED_STREAMER);
+                const otherNonFavoriteStreamers = nonFavoriteStreamers.filter(s => s.username !== CONFIG.SPONSORED_STREAMER);
+
+                // Sıralama: favori canlı > diğer canlı > sponsor (canlıysa) > sponsor (offline) > favori offline > diğer offline
+
+                const liveFavs = otherFavoriteStreamers.filter(s => s.isLive)
+                    .sort((a, b) => b.viewers - a.viewers);
+                const liveOthers = otherNonFavoriteStreamers.filter(s => s.isLive)
+                    .sort((a, b) => b.viewers - a.viewers);
+                const offlineFavs = otherFavoriteStreamers.filter(s => !s.isLive);
+                const offlineOthers = otherNonFavoriteStreamers.filter(s => !s.isLive);
+
+                // Favori canlılar
+                liveFavs.forEach(streamer => {
+                    UI.renderStreamerCard(streamer, false);
+                });
+
+                // Diğer canlılar
+                liveOthers.forEach(streamer => {
+                    UI.renderStreamerCard(streamer, false);
+                });
+
+                // Sponsorlu yayıncı canlıysa burada göster (canlıların hemen altında)
+                if (sponsoredStreamer && sponsoredStreamer.isLive) {
+                    UI.renderStreamerCard(sponsoredStreamer, true);
+                }
+
+                // Sponsorlu yayıncı offline ise burada göster (offline'ların üstünde)
+                if (sponsoredStreamer && !sponsoredStreamer.isLive) {
+                    UI.renderStreamerCard(sponsoredStreamer, true);
+                }
+
+                // Favori offline
+                offlineFavs.forEach(streamer => {
+                    UI.renderStreamerCard(streamer, false);
+                });
+
+                // Diğer offline
+                offlineOthers.forEach(streamer => {
+                    UI.renderStreamerCard(streamer, false);
+                });
+
+                UI.initIntersectionObserver();
+            },
+
+            renderStreamerCard: (data, isSponsored) => {
+                const isLive = data.isLive;
+                const startTime = data.startTime;
+                const placeholderUrl = `https://via.placeholder.com/150/1a1a24/00ff00?text=${data.initials}`;
+                const smallPlaceholderUrl = `https://via.placeholder.com/50/1a1a24/00ff00?text=${data.initials}`;
+
+                const streamerCard = document.createElement('div');
+                streamerCard.className = `streamer-card ${isLive ? 'live' : ''} ${isSponsored ? 'sponsored' : ''}`;
+                streamerCard.dataset.username = data.username;
+                if (isLive && startTime) {
+                    streamerCard.dataset.startTime = startTime;
+                }
+
+                const mediaDiv = document.createElement('div');
+                mediaDiv.className = 'streamer-media';
+                
+                if (isLive) {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'iframe-placeholder';
+                    placeholder.style.width = '100%';
+                    placeholder.style.height = '100%';
+                    placeholder.style.backgroundColor = '#2a2a35';
+                    placeholder.dataset.username = data.username;
+                    mediaDiv.appendChild(placeholder);
+                    
+                    const liveBadge = document.createElement('div');
+                    liveBadge.className = 'live-badge';
+                    
+                    const livePulse = document.createElement('div');
+                    livePulse.className = 'live-pulse';
+                    
+                    liveBadge.append(livePulse, document.createTextNode('CANLI'));
+                    mediaDiv.appendChild(liveBadge);
+
+                    const gameTag = document.createElement('div');
+                    gameTag.className = 'streamer-tag';
+                    gameTag.textContent = 'GTAV';
+                    mediaDiv.appendChild(gameTag);
+                } else {
+                    const offlineDiv = document.createElement('div');
+                    offlineDiv.className = 'offline-placeholder';
+                    
+                    const profileImg = Utils.createImageElement(
+                        data.profilePicUrls,
+                        data.username,
+                        'profile-image',
+                        placeholderUrl
+                    );
+                    
+                    const offlineStatus = document.createElement('div');
+                    offlineStatus.className = 'offline-status';
+                    offlineStatus.textContent = 'ÇEVRİMDIŞI';
+                    
+                    offlineDiv.append(profileImg, offlineStatus);
+                    mediaDiv.appendChild(offlineDiv);
+                }
+
+                if (isSponsored) {
+                    const sponsoredBadge = document.createElement('div');
+                    sponsoredBadge.className = 'sponsored-badge';
+                    
+                    const starIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    starIcon.setAttribute("width", "14");
+                    starIcon.setAttribute("height", "14");
+                    starIcon.setAttribute("viewBox", "0 0 24 24");
+                    
+                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    path.setAttribute("d", "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z");
+                    path.setAttribute("fill", "currentColor");
+                    
+                    starIcon.appendChild(path);
+                    sponsoredBadge.append(starIcon, document.createTextNode('SPONSOR'));
+                    mediaDiv.appendChild(sponsoredBadge);
+                }
+
+                const infoDiv = document.createElement('div');
+                infoDiv.className = 'streamer-info';
+                
+                const headerDiv = document.createElement('div');
+                headerDiv.className = 'streamer-header';
+
+                // PROFİL RESMİ: Bağlantıyı kaldır, favori ikonu üstüne ekle
+                const avatarWrapper = document.createElement('div');
+                avatarWrapper.style.position = 'relative';
+                avatarWrapper.style.display = 'inline-block';
+
+                const avatarImg = Utils.createImageElement(
+                    data.profilePicUrls,
+                    data.username,
+                    'streamer-avatar',
+                    smallPlaceholderUrl
+                );
+
+                // Favori ikonu ekle
+                const favBtn = document.createElement('div');
+                favBtn.className = 'favorite-btn';
+                favBtn.title = 'Favorilere ekle';
+                favBtn.innerHTML = `
+<div class="absolute inset-0 rounded-full flex flex-col w-auto h-auto cursor-pointer bg-white/60 dark:bg-black/60 border border-black/20 dark:border-white/15 backdrop-blur-md" style="top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;pointer-events:auto;">
+    <div class="w-full h-full center" style="display:flex;align-items:center;justify-content:center;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" style="color:white;" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" fill-rule="evenodd" d="M11.943 1.25c-2.073 0-3.706 0-4.982.173c-1.31.178-2.355.552-3.176 1.382c-.82.829-1.188 1.882-1.364 3.202c-.171 1.289-.171 2.938-.171 5.034v5.098c0 1.508 0 2.701.096 3.6c.095.888.298 1.689.88 2.225c.466.43 1.056.7 1.686.773c.787.09 1.522-.286 2.247-.8c.733-.518 1.622-1.305 2.744-2.297l.036-.032c.52-.46.872-.77 1.166-.986c.284-.207.457-.282.603-.312a1.5 1.5 0 0 1 .584 0c.146.03.32.105.603.312c.294.215.646.526 1.166.986l.037.032c1.121.992 2.01 1.779 2.743 2.298c.725.513 1.46.889 2.247.799a3 3 0 0 0 1.686-.773c.581-.536.785-1.337.88-2.225c.096-.899.096-2.092.096-3.6v-5.098c0-2.096 0-3.746-.171-5.034c-.176-1.32-.544-2.373-1.364-3.202c-.821-.83-1.866-1.204-3.176-1.382c-1.276-.173-2.909-.173-4.982-.173zM4.85 3.86c.497-.502 1.172-.795 2.312-.95c1.163-.158 2.694-.16 4.837-.16s3.674.002 4.837.16c1.14.155 1.815.448 2.312.95c.498.503.789 1.188.943 2.345c.156 1.178.158 2.727.158 4.893v4.993c0 1.566-.001 2.68-.087 3.488c-.09.83-.253 1.141-.405 1.282c-.234.215-.528.35-.84.385c-.2.023-.534-.054-1.21-.532c-.658-.467-1.487-1.198-2.653-2.23l-.026-.023c-.488-.431-.892-.788-1.249-1.05c-.373-.272-.749-.482-1.192-.571a3 3 0 0 0-1.176 0c-.443.09-.82.299-1.192.572c-.357.26-.761.618-1.249 1.049l-.026.023c-1.166 1.032-1.995 1.763-2.653 2.23c-.676.478-1.01.555-1.21.532a1.5 1.5 0 0 1-.84-.385c-.152-.141-.316-.452-.404-1.282c-.087-.809-.088-1.922-.088-3.488v-4.994c0-2.165.002-3.714.158-4.892c.154-1.157.445-1.842.943-2.345" clip-rule="evenodd"></path>
+        </svg>
+    </div>
+</div>
+`;
+favBtn.style.position = 'absolute';
+favBtn.style.top = '0';
+favBtn.style.left = '0';
+favBtn.style.width = '100%';
+favBtn.style.height = '100%';
+favBtn.style.display = 'flex';
+favBtn.style.alignItems = 'center';
+favBtn.style.justifyContent = 'center';
+favBtn.style.cursor = 'pointer';
+favBtn.style.zIndex = '2';
+favBtn.style.background = 'none';
+
+// Favori ise ikon altın renkli olsun
+const favKey = 'kick-gta-favorites';
+let favorites = [];
+try {
+    favorites = JSON.parse(localStorage.getItem(favKey)) || [];
+} catch {}
+const isFav = favorites.includes(data.username);
+if (isFav) {
+    favBtn.querySelector('svg').style.color = '#ffe066';
+}
+
+favBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    let favs = [];
+    try {
+        favs = JSON.parse(localStorage.getItem(favKey)) || [];
+    } catch {}
+    if (!favs.includes(data.username)) {
+        favs.unshift(data.username);
+    } else {
+        favs = favs.filter(u => u !== data.username);
+    }
+    localStorage.setItem(favKey, JSON.stringify(favs));
+    // Yeniden sırala ve göster
+    UI.renderStreamers(Object.values(APP_STATE.streamerStats));
+});
+
+avatarWrapper.appendChild(avatarImg);
+avatarWrapper.appendChild(favBtn);
+
+// YAYINCI ADI ve BAŞLIK EKLE
+const nameContainer = document.createElement('div');
+nameContainer.className = 'streamer-name-container';
+
+const nameLink = document.createElement('a');
+nameLink.className = 'streamer-name';
+nameLink.href = `https://kick.com/${data.username}`;
+nameLink.target = '_blank';
+nameLink.rel = 'noopener noreferrer';
+nameLink.textContent = data.username;
+
+const titleDiv = document.createElement('div');
+titleDiv.className = 'streamer-title';
+titleDiv.textContent = data.title || '';
+
+nameContainer.appendChild(nameLink);
+nameContainer.appendChild(titleDiv);
+
+headerDiv.append(avatarWrapper, nameContainer);
+                infoDiv.appendChild(headerDiv);
+                
+                const metaDiv = document.createElement('div');
+                metaDiv.className = 'streamer-meta';
+                
+                if (isLive) {
+                    const categoryDiv = document.createElement('a');
+                    categoryDiv.className = 'streamer-category';
+                    categoryDiv.textContent = data.category;
+
+                    // Noktalı kategoriler için özel slug oluşturma
+                    let categorySlug;
+                    if (data.category.includes('.')) {
+                        // Sadece harf ve rakamları al, noktaları kaldır, küçük harfe çevir
+                        categorySlug = data.category.replace(/\./g, '').toLowerCase();
+                    } else {
+                        // Diğerleri için klasik slug
+                        categorySlug = data.category
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, '-')
+                            .replace(/^-+|-+$/g, '');
+                    }
+
+                    categoryDiv.href = `https://kick.com/category/${categorySlug}`;
+                    categoryDiv.target = '_blank';
+                    categoryDiv.rel = 'noopener noreferrer';
+                    metaDiv.appendChild(categoryDiv);
+
+                    const viewerCount = document.createElement('div');
+                    viewerCount.className = 'viewer-count';
+                    
+                    const eyeIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+                    eyeIcon.setAttribute("width", "14");
+                    eyeIcon.setAttribute("height", "14");
+                    eyeIcon.setAttribute("viewBox", "0 0 24 24");
+                    
+                    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                    path.setAttribute("d", "M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3z");
+                    path.setAttribute("fill", "currentColor");
+                    
+                    eyeIcon.appendChild(path);
+                    eyeIcon.classList.add('viewer-icon');
+                    viewerCount.append(eyeIcon, document.createTextNode(Utils.formatNumber(data.viewers)));
+                    metaDiv.appendChild(viewerCount);
+                    
+                    if (startTime) {
+                        const durationDiv = document.createElement('div');
+                        durationDiv.className = 'live-duration';
+                        
+                        const clockIcon = Utils.createClockIcon();
+                        clockIcon.classList.add('clock-icon');
+                        durationDiv.append(clockIcon, document.createElement('span'));
+                        metaDiv.appendChild(durationDiv);
+                        UI.updateDurationForCard(streamerCard, startTime);
+                    }
+                }
+                
+                infoDiv.appendChild(metaDiv);
+                
+                streamerCard.append(mediaDiv, infoDiv);
+                document.getElementById('streamer-list').appendChild(streamerCard);
+
+                if (isLive && startTime) {
+                    APP_STATE.updateIntervals[data.username] = setInterval(() => {
+                        if (streamerCard.isConnected) {
+                            UI.updateDurationForCard(streamerCard, startTime);
+                        } else {
+                            clearInterval(APP_STATE.updateIntervals[data.username]);
+                            delete APP_STATE.updateIntervals[data.username];
+                        }
+                    }, 1000);
+                }
+            },
+
+            initIntersectionObserver: () => {
+                if (APP_STATE.observer) {
+                    APP_STATE.observer.disconnect();
+                }
+
+                APP_STATE.observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const placeholder = entry.target;
+                            const username = placeholder.dataset.username;
+                            
+                            const iframe = document.createElement('iframe');
+                            iframe.src = `https://player.kick.com/${username}?autoplay=true&muted=true`;
+                            iframe.className = 'streamer-iframe';
+                            iframe.setAttribute('frameborder', '0');
+                            iframe.setAttribute('allowfullscreen', 'true');
+                            iframe.loading = 'lazy';
+                            
+                            placeholder.replaceWith(iframe);
+                            APP_STATE.observer.unobserve(placeholder);
+                        }
+                    });
+                }, {
+                    rootMargin: '200px',
+                    threshold: 0.1
+                });
+
+                document.querySelectorAll('.iframe-placeholder').forEach(el => {
+                    APP_STATE.observer.observe(el);
+                });
+            },
+
+            showError: (message) => {
+                const errorElement = document.getElementById('error-message');
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            },
+
+            updateTime: () => {
+                const now = new Date();
+                document.getElementById('update-time').textContent =
+                    `${now.toLocaleDateString('tr-TR')} ${now.toLocaleTimeString('tr-TR')}`;
+            }
+        };
+
+        // Ana Uygulama Fonksiyonları
+        const App = {
+            fetchStreamers: async (isInitialLoad = false) => {
+                const loadingElement = document.getElementById('loading');
+                const errorElement = document.getElementById('error-message');
+                const streamerList = document.getElementById('streamer-list');
+                
+                if (isInitialLoad) {
+                    loadingElement.style.display = 'flex';
+                    errorElement.style.display = 'none';
+                    streamerList.innerHTML = '';
+                }
+                
+                try {
+                    console.log("Yayıncı verileri alınıyor...");
+                    const streamersData = await API.fetchStreamerStats();
+                    console.log("Alınan yayıncı verileri:", streamersData);
+                    
+                    if (streamersData.length === 0 && !isInitialLoad) {
+                        throw new Error('Hiç yayıncı verisi alınamadı');
+                    }
+                    
+                    UI.renderStreamers(streamersData);
+                    UI.updateTime();
+                    
+                    if (isInitialLoad && streamersData.length < CONFIG.STATIC_STREAMERS.length) {
+                        setTimeout(() => App.fetchStreamers(false), 500);
+                    }
+                } catch (error) {
+                    console.error('Hata:', error);
+                    if (!isInitialLoad) {
+                        UI.showError(`Yayınlar yüklenirken bir hata oluştu: ${error.message}`);
+                    }
+                } finally {
+                    if (!isInitialLoad) {
+                        loadingElement.style.display = 'none';
+                    }
+                    console.log("Yükleme tamamlandı");
+                }
+            },
+
+            init: () => {
+                App.fetchStreamers(true);
+                
+                setInterval(() => {
+                    App.fetchStreamers(false);
+                }, CONFIG.REFRESH_INTERVAL);
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', App.init);
+        window.fetchStreamers = () => App.fetchStreamers(false);
+
+        // Arama olayları
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+        searchInput.addEventListener('input', debounce(() => {
+            UI.renderStreamers(Object.values(APP_STATE.streamerStats));
+        }, 200));
+        document.getElementById('search-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            UI.renderStreamers(Object.values(APP_STATE.streamerStats));
+        });
+    }
+});
+    </script>
+</body>
+</html>

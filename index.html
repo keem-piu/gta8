@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick.com GTA Canlı Yayınları</title>
+    <!-- SVG favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3ClinearGradient id='a' x1='24' x2='24' y1='39.744' y2='6.848' gradientTransform='matrix(1 0 0 -1 0 47.89)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234c4c4c'/%3E%3Cstop offset='1' stop-color='%23343434'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23a)' d='M5,8h38c0.552,0,1,0.448,1,1v4c0,0.552-0.448,1-1,1l0,0c-1.222,0-2.337,0.701-2.866,1.803	L28.283,40.474C28.109,40.798,27.771,41,27.403,41h-4.785c-0.379,0-0.725-0.214-0.894-0.553l-10.935-22.87	C9.693,15.385,7.451,14,5,14l0,0c-0.552,0-1-0.448-1-1V9C4,8.448,4.448,8,5,8z'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M6,11.323V11c0-0.552,0.448-1,1-1h18c0.552,0,1,0.448,1,1v0.219	c0,0.459-0.312,0.859-0.757,0.97l-0.824,0.206c-1.241,0.31-1.876,1.69-1.304,2.835l4.345,8.69c0.199,0.398,0.781,0.357,0.922-0.065	l2.846-8.539c0.426-1.279-0.265-2.662-1.544-3.088l0,0C29.275,12.092,29,11.71,29,11.279V11c0-0.552,0.448-1,1-1h11.061	C41.579,10,42,10.421,42,10.939v0.384c0,0.404-0.259,0.763-0.642,0.891l0,0c-1.51,0.503-2.758,1.586-3.469,3.009L27.267,38.416	C27.104,38.772,26.749,39,26.358,39h-2.729c-0.385,0-0.735-0.221-0.902-0.567l-9.874-20.571c-1.192-2.484-3.273-4.43-5.831-5.453	l-0.394-0.158C6.249,12.1,6,11.732,6,11.323z' clip-rule='evenodd'/%3E%3ClinearGradient id='b' x1='14.755' x2='36.92' y1='40.623' y2='18.457' gradientTransform='matrix(1 0 0 -1 0 47.89)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%234caf50'/%3E%3Cstop offset='.133' stop-color='%234aae50'/%3E%3Cstop offset='.239' stop-color='%2343a94e'/%3E%3Cstop offset='.373' stop-color='%2338a14c'/%3E%3Cstop offset='.482' stop-color='%23279648'/%3E%3Cstop offset='.621' stop-color='%23184'/%3E%3Cstop offset='1' stop-color='%23088242'/%3E%3C/linearGradient%3E%3Cpath fill='url(%23b)' d='M39.609,11h-8.338c-0.317,0-0.417,0.427-0.134,0.568l0.394,0.197	c1.396,0.698,2.023,2.349,1.444,3.797l0,0l0,0L31.6,19l-3.201,8.002c-0.158,0.395-0.705,0.425-0.906,0.05l-6.044-11.333	c-0.794-1.489-0.204-3.34,1.305-4.095c0.31-0.155,0.2-0.623-0.147-0.623H9.496c-0.42,0-0.573,0.553-0.213,0.769	c2.422,1.453,4.347,3.604,5.524,6.172l8.926,19.475C23.896,37.772,24.251,38,24.642,38h0.703c0.398,0,0.758-0.236,0.917-0.601	l9.405-21.621l0,0c0.865-1.802,2.305-3.265,4.094-4.158C40.07,11.465,39.954,11,39.609,11z'/%3E%3C/svg%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #53fc18;
+            --primary-dark: #2b8a0e;
+            --background: #18181c;
+            --card-bg: #23232b;
+            --text: #f5f5f7;
+            --text-secondary: #b0b0b8;
+            --live-red: #ff3b3b;
+            --sponsor-gold: #ffe066;
+            --category-bg: #23232b;
+            --category-text: #53fc18;
+            --card-shadow: 0 6px 32px 0 rgba(0,0,0,0.18);
+            --card-hover-shadow: 0 12px 32px 0 rgba(83,252,24,0.10);
+            --border-radius: 22px;
+        }
+
+        html, body {
+            height: 100%;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #18181c 0%, #23232b 100%);
+            color: var(--text);
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            letter-spacing: 0.01em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 16px 16px 16px;
+        }
+
+        header {
+            background: transparent;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        #search-form {
+            position: relative;
+            margin-top: 18px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #53fc18;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px 20px 14px 44px; /* Soldan boşluk artırıldı */
+            border-radius: 14px;
+            border: none;
+            background: #23232b;
+            color: var(--text);
+            font-size: 1.08rem;
+            margin: 0 auto;
+            display: block;
+            outline: none;
+            box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+            transition: box-shadow 0.2s, border 0.2s;
+        }
+        .search-bar:focus {
+            box-shadow: 0 4px 16px 0 rgba(83,252,24,0.12);
+            border: 1.5px solid var(--primary);
+        }
+
+        .streamer-list {
+            display: grid;
+            grid-template-columns: repeat(3, 500px); /* 3 kanal, her biri 500px */
+            justify-content: center;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .streamer-card {
+            width: 500px;
+            min-width: 0;
+            max-width: 100%;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: box-shadow 0.25s, transform 0.18s;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: none;
+            position: relative;
+        }
+        .streamer-card:hover {
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-6px) scale(1.02);
+        }
+        .streamer-card.live {
+            border: 2px solid var(--live-red);
+        }
+        .streamer-card.sponsored {
+            border: 2px solid var(--sponsor-gold);
+            box-shadow: 0 0 24px 0 rgba(255, 224, 102, 0.18);
+        }
+
+        .streamer-media {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #19191e;
+            position: relative;
+        }
+        .streamer-iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: none;
+            display: block;
+        }
+        .offline-placeholder {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            gap: 12px;
+            background: rgba(0,0,0,0.55);
+        }
+        .profile-image {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--text-secondary);
+        }
+        .offline-status {
+            background: rgba(0,0,0,0.7);
+            padding: 6px 18px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .streamer-info {
+            padding: 22px 20px 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            flex-grow: 1;
+        }
+        .streamer-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            /* align-items: center; Zaten var, tekrar eklemeye gerek yok */
+        }
+        .avatar-wrapper,
+        .streamer-header > div[style*="inline-block"] {
+            position: relative;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 62px;
+            height: 62px;
+            min-width: 62px;
+            min-height: 62px;
+            /* Daire oranı için */
+            border-radius: 50%;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .streamer-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .favorite-btn {
+            position: absolute !important;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            background: none;
+            z-index: 2;
+            border-radius: 50%;
+            box-sizing: border-box;
+            /* Parlaklık ve efektler zaten mevcut */
+        }
+
+        .streamer-name-container {
+            flex-grow: 1;
+            min-width: 0;
+        }
+        .streamer-name {
+            font-weight: 700;
+            font-size: 1.18rem;
+            color: var(--primary);
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: color 0.18s;
+        }
+        .streamer-name:hover {
+            color: #fff;
+        }
+        .streamer-title {
+            font-size: 1.01rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+        .streamer-meta {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;      /* Ortala */
+            gap: 18px;                   /* Aralar biraz açıldı */
+            margin-top: 24px;
+            width: 100%;
+            font-size: 1.08rem;
+            flex-wrap: nowrap;           /* Alt satıra taşmasın */
+            overflow: hidden;            /* Taşanları gizle */
+        }
+        .streamer-category,
+        .viewer-count,
+        .live-duration {
+            flex: 1 1 0;
+            min-width: 0;
+            max-width: 180px;            /* Gerekirse artırabilirsin */
+            padding: 7px 10px;
+            font-size: 1.08rem;
+            border-radius: 8px;
+            white-space: nowrap;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;     /* İçeriği ortala */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0 2px;
+        }
+
+        .streamer-category {
+            background: var(--category-bg);
+            color: var(--category-text);
+            font-weight: 700;
+            border: 1.5px solid var(--primary);
+            max-width: 100%;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+            text-align: center;
+            text-decoration: none; /* Altı çizgiyi kaldırır */
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .viewer-count {
+            background: rgba(255, 59, 59, 0.13);
+            color: var(--live-red);
+            font-weight: 700;
+            gap: 6px;
+        }
+
+        .viewer-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        .live-duration {
+            background: rgba(83, 252, 24, 0.09);
+            color: var(--primary);
+            font-family: monospace;
+            font-weight: 700;
+            gap: 6px;
+        }
+        .clock-icon {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+        .live-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--live-red);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px 0 rgba(255,59,59,0.10);
+        }
+        .live-pulse {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 1; }
+            50% { transform: scale(1.15); opacity: 0.7; }
+            100% { transform: scale(0.95); opacity: 1; }
+        }
+        .streamer-tag {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            background: rgba(0,0,0,0.7);
+            color: var(--primary);
+            padding: 5px 14px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 600;
+        }
+        .sponsored-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--sponsor-gold);
+            color: #23232b;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px 0 rgba(255,224,102,0.10);
+        }
+        .last-updated {
+            text-align: center;
+            margin-top: 36px;
+            color: var(--text-secondary);
+            font-size: 0.97rem;
+        }
+        .refresh-button {
+            background: #23232b;
+            color: var(--primary);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 28px;
+            transition: all 0.2s;
+            font-weight: 700;
+            font-size: 1.01rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+        }
+        .refresh-button:hover {
+            background: var(--primary);
+            color: #23232b;
+            transform: translateY(-2px) scale(1.03);
+        }
+        .loading {
+            text-align: center;
+            padding: 36px;
+            color: var(--primary);
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+        .solar-clock {
+            width: 100%;
+            height: 100%;
+            animation: rotate 2s linear infinite;
+            transform-origin: center;
+        }
+        .solar-clock-circle {
+            fill: none;
+            stroke: var(--primary);
+            stroke-width: 4;
+            stroke-dasharray: 150;
+            stroke-dashoffset: 150;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes dash {
+            0% { stroke-dashoffset: 150; stroke: var(--primary);}
+            50% { stroke-dashoffset: 50; stroke: var(--primary-dark);}
+            100% { stroke-dashoffset: 150; stroke: var(--primary);}
+        }
+        .error-message {
+            color: #ff5555;
+            text-align: center;
+            padding: 18px;
+            background: rgba(255, 85, 85, 0.10);
+            border-radius: 10px;
+            margin: 18px 0;
+            border: 1.5px solid rgba(255, 85, 85, 0.18);
+        }
+        @media (max-width: 900px) {
+            .streamer-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px 2vw;
+            }
+            .streamer-list {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .streamer-info {
+                padding: 14px 8px 12px 8px;
+            }
+            .streamer-header {
+                gap: 10px;
+            }
+        }
+        /* Responsive düzeltme */
+        @media (max-width: 1600px) {
+            .streamer-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .streamer-card {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1100px) {
+            .streamer-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sponsor kullanıcı adı için animasyonlu degrade renk efekti */
+.streamer-card.sponsored .streamer-name {
+    background: linear-gradient(90deg, #53fc18, #00e0ff, #53fc18, #ffe066, #53fc18);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: sponsor-gradient-move 2.5s linear infinite;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+@keyframes sponsor-gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Sponsor kartındaki profil resmi ve çevrimdışı resmi için animasyonlu degrade çerçeve */
+.streamer-card.sponsored .streamer-avatar,
+.streamer-card.sponsored .profile-image {
+    position: relative;
+    z-index: 1;
+    border: 3px solid transparent;
+    background: linear-gradient(120deg, #53fc18, #00e0ff, #53fc18, #ffe066, #53fc18);
+    background-size: 300% 300%;
+    animation: sponsor-avatar-gradient-move 2.5s linear infinite;
+    /* Görselin degrade görünmesi için aşağıdaki satırlar gerekli */
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px transparent, 0 0 16px 2px rgba(83,252,24,0.18);
+}
+
+@keyframes sponsor-avatar-gradient-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.favorite-btn {
+    box-shadow: 0 0 0 3px #53fc18, 0 2px 8px 0 rgba(83,252,24,0.18);
+    border-radius: 50%;
+    transition: box-shadow 0.2s, transform 0.15s;
+    opacity: 0.93;
+    outline: 2px solid #23232b;
+}
+.favorite-btn:hover {
+    box-shadow: 0 0 0 5px #53fc18, 0 4px 16px 0 rgba(83,252,24,0.25);
+    transform: scale(1.08);
+    opacity: 1;
+    outline: 2.5px solid #53fc18;
+}
+.favorite-btn svg {
+    filter: drop-shadow(0 0 4px #53fc18);
+}
+
+/* .avatar-wrapper ve .favorite-btn için ekleyin veya güncelleyin */
+
+.avatar-wrapper {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    min-height: 62px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.favorite-btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s;
+}
+
+.avatar-wrapper:hover .favorite-btn,
+.avatar-wrapper:focus-within .favorite-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+        /* V7: Orijinal koyu/yeşil tema korunarak taşmalar düzeltildi */
+        *, *::before, *::after { box-sizing:border-box; }
+        .container { max-width: 1500px; }
+        .streamer-list { grid-template-columns: repeat(3,minmax(0,1fr)); gap:20px; align-items:stretch; }
+        .streamer-card { width:100%; min-width:0; }
+        .streamer-card:hover { transform: translateY(-3px); }
+        .streamer-info { padding:17px; gap:13px; }
+        .streamer-meta { margin-top:0; gap:7px; flex-wrap:wrap; justify-content:stretch; }
+        .streamer-meta > * { font-size:0.81rem; flex:1 1 90px; margin:0; min-height:35px; }
+        .streamer-name-container { overflow:hidden; }
+        .streamer-title { font-size:0.89rem; }
+        .streamer-media { overflow:hidden; }
+        .streamer-iframe { z-index:3; }
+        .media-overlay {position:absolute;inset:0; display:flex;align-items:center;justify-content:center; flex-direction:column; gap:12px; background:linear-gradient(150deg,#191b20,#25332c);}
+        .media-overlay .profile-image { width:88px;height:88px; }
+        .media-image {position:relative;width:90px;height:90px;display:flex;align-items:center;justify-content:center;}
+        .media-image .initials {position:absolute;color:#53fc18;font-size:1.5rem;z-index:0;}
+        .media-image img {z-index:1;}
+        .avatar-wrapper .initials {position:absolute;color:#53fc18;font-weight:700;z-index:0;}
+        .avatar-wrapper img {z-index:1;}
+        .has-image .initials {display:none;}
+        .media-caption.live {color:white;border-color:#ff5555;background:#872727;}
+        .media-caption {color:#cbd4c9;font-size:.82rem; padding:5px 12px;border:1px solid #52645b;border-radius:8px; background:#14201acc; }
+        .media-play {font-size:1rem; padding:10px 18px; background:#53fc18; color:#0d1b0d; border:0; border-radius:11px; font-weight:750; cursor:pointer;}
+        .media-play:hover,.media-play:focus-visible {background:#91ff68;outline:2px solid #fff;outline-offset:2px;}
+        .player-exit {position:absolute;right:9px;top:9px;z-index:5;background:#14191cf0;color:white;border:1px solid #6b8075;border-radius:8px;padding:7px 12px;cursor:pointer;}
+        .last-stream {padding:12px;border-radius:10px;background:#1a2722;display:flex; flex-wrap:wrap; gap:6px;align-items:center; font-size:.82rem;color:#b9c9bd;}
+        .last-stream strong {color:#e3efe6;font-weight:600;}
+        .status-tag {font-size:.78rem;border-radius:7px;padding:5px 9px;font-weight:700; letter-spacing:.02em;}
+        .status-tag.live {color:#fff;background:#a32626;}
+        .status-tag.offline {color:#b7c7bd;background:#303734;}
+        .status-tag.unknown {color:#ffda92;background:#403221;}
+        .toolbar {display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px;}
+        .filter-bar {display:flex;gap:7px;flex-wrap:wrap;}
+        .filter-chip {border:1px solid #3b5448;background:#202923;color:#dcebe0;border-radius:9px;padding:10px 13px;cursor:pointer;}
+        .filter-chip.active {background:#53fc18;color:#102017;border-color:#53fc18;font-weight:700;}
+        .sort-control {display:flex;align-items:center;gap:8px;color:#bac9bc;font-size:.88rem;}
+        .sort-control select {padding:9px;color:#edf9ed;background:#26302b;border:1px solid #385044;border-radius:9px;}
+        .data-status {color:#bacbbc;background:#1c2722;border:1px solid #314b3c;padding:12px 14px;border-radius:11px;margin-top:16px;font-size:.9rem;line-height:1.5;}
+        .empty-message {text-align:center;padding:35px;color:#cbd5c9;}
+        .favorite-btn {border-radius:10px; width:40px;height:38px;position:static!important;flex:none;background:#2e3a32;color:#fff;box-shadow:none;outline:0;opacity:1;border:1px solid #405347;font-size:1.3rem;cursor:pointer; pointer-events:auto!important; opacity:1!important;}
+        .favorite-btn[aria-pressed="true"] {color:#ffe066;}
+        .streamer-header {gap:10px;}
+        .streamer-header .streamer-avatar {height:50px;width:50px;}
+        .avatar-wrapper {min-width:54px;width:54px;min-height:54px;height:54px;}
+        .auto-controls {margin:15px 0 0;display:flex;flex-wrap:wrap;gap:12px;align-items:center;
+          color:#d8eddb;font-size:.88rem;background:#18251f;border:1px solid #345447;padding:12px 14px;border-radius:10px;}
+        .auto-controls label {display:flex;align-items:center;gap:6px;cursor:pointer;}
+        .auto-controls input {accent-color:#53fc18;width:16px;height:16px;}
+        #autoplay-status {margin-left:auto;color:#9bb6a6;}
+        .media-overlay[hidden]{display:none!important;}
+        .loading {padding:16px;}
+        .loading[hidden], [hidden] {display:none!important;}
+        @media(max-width:1100px){.streamer-list {grid-template-columns:repeat(2,minmax(0,1fr));}}
+        @media(max-width:680px){.streamer-list {grid-template-columns:minmax(0,1fr);gap:14px;} .container{padding:16px 12px;}h1{font-size:1.55rem;}.streamer-card:hover{transform:none;}}
+        @media(prefers-reduced-motion:reduce){.streamer-card,.favorite-btn{transition:none!important;transform:none!important;}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kick.com GTA Canlı Yayınları</h1>
+            <form id="search-form"  style="margin-top:20px; position:relative; max-width:400px; margin-left:auto; margin-right:auto;">
+                <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="m21 21l-4-4m2-6a8 8 0 1 1-16 0a8 8 0 0 1 16 0"></path>
+                    </svg>
+                </span>
+                <input type="text" id="search-input" class="search-bar" placeholder="Kanal ara...">
+            </form>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <div class="toolbar" role="group" aria-label="Yayıncı filtreleri">
+            <div class="filter-bar">
+              <button type="button" class="filter-chip active" data-filter="all">Tümü</button>
+              <button type="button" class="filter-chip" data-filter="live">🔴 Canlı</button>
+              <button type="button" class="filter-chip" data-filter="offline">Çevrimdışı</button>
+              <button type="button" class="filter-chip" data-filter="favorites">★ Favoriler</button>
+            </div>
+            <label class="sort-control">Sırala <select id="sort-select"><option value="default">Canlı ve favoriler</option><option value="viewers">İzleyici sayısı</option><option value="name">İsim</option><option value="recent">Son yayın tarihi</option></select></label>
+        </div>
+        <div class="auto-controls" aria-label="Otomatik yayın oynatma">
+          <label><input id="autoplay-toggle" type="checkbox" checked> Görünen canlı yayınları otomatik oynat (sessiz)</label>
+          <label><input id="unknown-toggle" type="checkbox" checked> Durumu bilinmeyen kanalları da dene</label>
+          <span id="autoplay-status" role="status">Oynatıcılar hazırlanıyor</span>
+        </div>
+        <div id="data-status" class="data-status" role="status" aria-live="polite">Yayıncı listesi hazırlanıyor...</div>
+        <div id="streamer-list" class="streamer-list"></div>
+        <p id="empty-message" class="empty-message" hidden>Bu aramaya uygun kanal yok.</p>
+
+        <!-- Yükleniyor bölümü kartların altına taşındı -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner">
+                <svg class="solar-clock" viewBox="0 0 50 50">
+                    <circle class="solar-clock-circle" cx="25" cy="25" r="20"></circle>
+                </svg>
+            </div>
+            <div>Yayınlar hızla yükleniyor...</div>
+        </div>
+
+        <div class="last-updated">
+            Son doğrulama: <span id="update-time">Henüz yok</span>
+        </div>
+
+        <center>
+            <button class="refresh-button" id="refresh-button" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z" fill="currentColor"/>
+                </svg>
+                Yenile
+            </button>
+        </center>
+    </div>
+
+    <script src="./app.js" defer></script>
+</body>
+</html>
